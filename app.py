@@ -7,21 +7,31 @@ import core_pipelines as cp
 import risk_sentiment as rs
 import ml_inference as ml
 
+# -----------------------------------------------------------------------------
+# TERMINAL INITIALIZATION CONFIGURATION (FINAL EMERITED ICONS MIX)
+# -----------------------------------------------------------------------------
 st.set_page_config(
-    page_title="AlphaIntel | AI Powered Real-TimeFinancial Intelligence Platform",
-    page_icon="📊",
+    page_title="AlphaIntel | Financial Intelligence Terminal",
+    page_icon="📊",               # Tab Icon: Explicitly represents Quantitative Analytics Data
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
-# MODERN DARK GLASS INTERFACE THEME
+# MODERN DARK GLASS INTERFACE THEME (WITH STREAMLIT BRANDING HIDER EFFECT)
 st.markdown("""
     <style>
         @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;600;700&display=swap');
         
+        /* High-contrast terminal canvas foundations */
         .stApp { background-color: #07111F !important; color: #E2E8F0 !important; }
         html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
         
+        /* Complete elimination of default Streamlit header actions (GitHub, Edit, Menu) */
+        header[data-testid="stHeader"] { display: none !important; }
+        #MainMenu { visibility: hidden; }
+        footer { visibility: hidden; }
+        
+        /* Structural component glassmorphism mutations */
         .terminal-block { 
             background: #0C192E; 
             border: 1px solid #1E293B; 
@@ -31,13 +41,16 @@ st.markdown("""
             margin-bottom: 1.25rem;
         }
         
+        /* Metric Typography Rules */
         .metric-title { font-size: 0.75rem; color: #94A3B8; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
         .metric-value { font-family: 'JetBrains Mono', monospace; font-size: 1.65rem; font-weight: 700; color: #F8FAFC; margin-top: 0.25rem; }
         
+        /* Hard-pinned Custom Asset Signals */
         .signal-bullish { color: #00C896 !important; font-weight: 700; }
         .signal-bearish { color: #FF6B6B !important; font-weight: 700; }
         .signal-neutral { color: #FBBF24 !important; font-weight: 700; }
         
+        /* Technical panel spacing rules */
         .info-tag { font-size: 0.8rem; background: #1E293B; padding: 0.25rem 0.5rem; border-radius: 6px; color: #94A3B8; font-weight: 500; }
         hr { border-color: #1E293B !important; margin: 1rem 0 !important; }
         h1, h2, h3, h4, h5, h6 { color: #F8FAFC !important; font-weight: 600 !important; }
@@ -47,7 +60,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# Main Header
+# Main Application Title Header
 st.title("🧠 AlphaIntel™ AI Powered Real-Time Financial Intelligence Platform")
 st.caption("Unified Decision-Support Platform • Institutional Core Analytics Framework & Quantitative Inference System")
 st.markdown("---")
@@ -126,7 +139,7 @@ else:
     # Extract structural naming profile records via the core pipeline index
     meta_profile = cp.get_asset_profile(final_ticker)
 
-    # 🚀 PREMIUM VISUAL UPGRADE: DYNAMIC ASSET METADATA BLOCK BANNER
+    # PREMIUM VISUAL UPGRADE: DYNAMIC ASSET METADATA BLOCK BANNER
     st.markdown(f"""
         <div class="terminal-block" style="background: linear-gradient(90deg, #0F2042 0%, #0C192E 100%); border-left: 4px solid #3B82F6;">
             <span style="font-size:0.75rem; color:#64748B; font-weight:700; text-transform:uppercase; letter-spacing:1px;">Active Terminal Target Profile</span>
@@ -286,10 +299,13 @@ else:
         )
         st.plotly_chart(fig_feat, on_select="rerun")
 
-    # 🚀 ADDITION 5: LEGAL RISK COMPLIANCE DISCLAIMER FOOTER CARD
+    # 🚀 LEGAL RISK COMPLIANCE & PROFESSIONAL DEVELOPER ATTRIBUTION FOOTER CARD
     st.markdown("""
-        <div style="border-top: 1px solid #1E293B; padding-top: 1.5rem; text-align: center; margin-top: 2rem; padding-bottom: 1rem;">
-            <p style="font-size: 0.8rem; color: #64748B; max-width: 900px; margin: 0 auto; line-height: 1.5;">
+        <div style="border-top: 1px solid #1E293B; padding-top: 1.5rem; text-align: center; margin-top: 2.5rem; padding-bottom: 0.5rem;">
+            <p style="font-size: 0.85rem; color: #94A3B8; margin-bottom: 0.5rem; font-weight: 500;">
+                Architected & Engineered by <span style="color: #3B82F6; font-weight: 600;">Nikhilesh Reddy</span> • Electrical Engineering, IIT Roorkee
+            </p>
+            <p style="font-size: 0.75rem; color: #64748B; max-width: 950px; margin: 0 auto; line-height: 1.5; padding-top: 0.25rem;">
                 <b>System Disclaimer:</b> This terminal platform is designed exclusively for academic evaluation, portfolio visualization, and decision-support analytical workflow simulation. The quantitative forecasts, textual sentiment arrays, and technical indicator metrics rendered herein do not constitute formal investment advice, asset valuation endorsements, or fiduciary trading recommendations.
             </p>
         </div>
