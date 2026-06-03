@@ -299,11 +299,11 @@ else:
         )
         st.plotly_chart(fig_feat, on_select="rerun")
 
-    # 🚀 LEGAL RISK COMPLIANCE & PROFESSIONAL DEVELOPER ATTRIBUTION FOOTER CARD
+    # 🚀 REFACTORED INDIVIDUAL ATTRIBUTION & COMPLIANCE DISCLAIMER FOOTER
     st.markdown("""
         <div style="border-top: 1px solid #1E293B; padding-top: 1.5rem; text-align: center; margin-top: 2.5rem; padding-bottom: 0.5rem;">
             <p style="font-size: 0.85rem; color: #94A3B8; margin-bottom: 0.5rem; font-weight: 500;">
-                Architected & Engineered by <span style="color: #3B82F6; font-weight: 600;">Nikhilesh Reddy</span> • Electrical Engineering, IIT Roorkee
+                Architected & Engineered by <span style="color: #3B82F6; font-weight: 600;">Nikhilesh Reddy</span> • Quantitative Analytics & Software Engineering
             </p>
             <p style="font-size: 0.75rem; color: #64748B; max-width: 950px; margin: 0 auto; line-height: 1.5; padding-top: 0.25rem;">
                 <b>System Disclaimer:</b> This terminal platform is designed exclusively for academic evaluation, portfolio visualization, and decision-support analytical workflow simulation. The quantitative forecasts, textual sentiment arrays, and technical indicator metrics rendered herein do not constitute formal investment advice, asset valuation endorsements, or fiduciary trading recommendations.
