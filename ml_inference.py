@@ -42,7 +42,7 @@ def generate_price_prediction(df: pd.DataFrame, lag_days: int = 5) -> Tuple[bool
         X = clean_df[feature_cols].values
         y = clean_df['target'].values
         
-        # Human Design: Explicit depth controls to enforce structural regularization bounds
+        # Explicit depth controls to enforce structural regularization bounds
         model = RandomForestRegressor(
             n_estimators=50, 
             max_depth=4, 
